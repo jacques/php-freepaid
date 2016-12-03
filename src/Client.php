@@ -75,7 +75,7 @@ class Client
      * @param  string  $network
      * @param  integer $amount
      * @param  string  $client_ref
-     * @param  string  $quantity
+     * @param  integer  $quantity
      *
      * @return stdClass
      */
