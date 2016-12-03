@@ -1,5 +1,5 @@
 {
-    "name": "jacques/php-vas-freepaid",
+    "name": "jacques/php-freepaid",
     "type": "library",
     "description": "Library for interacting with Freepaid's SOAP interface for vending pre-paid Airtime Vouchers",
     "keywords": [
