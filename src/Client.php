@@ -32,8 +32,6 @@ class Client
      * @param  array $options
      *
      * @throws \InvalidArgumentException
-     *
-     * @return void
      */
     public function __construct($options = array())
     {
