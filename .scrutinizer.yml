@@ -11,5 +11,5 @@ build:
             -
                 command: 'vendor/bin/phpunit --colors --debug --configuration=tests/phpunit.xml --coverage-clover build/logs/clover.xml --coverage-text'
                 coverage:
-                    file: 'builds/logs/coverage.clover'
+                    file: 'logs/coverage.clover'
                     format: 'clover'
