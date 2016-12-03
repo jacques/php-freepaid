@@ -9,7 +9,7 @@ build:
     tests:
         override:
             -
-                command: 'vendor/bin/phpunit --colors --debug --configuration=tests/phpunit.xml --coverage-clover build/logs/clover.xml --coverage-text'
+                command: 'vendor/bin/phpunit --colors --debug --configuration=tests/phpunit.xml --coverage-clover build/logs/coverage.clover --coverage-text'
                 coverage:
                     file: 'logs/coverage.clover'
                     format: 'clover'
