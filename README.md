@@ -1,13 +1,14 @@
 # FreePaid
 
 [![Author](http://img.shields.io/badge/author-@jacques-blue.svg?style=flat-square)](https://twitter.com/jacques)
-[![Software License](https://img.shields.io/badge/license-mit-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Code Climate](https://codeclimate.com/repos/5842e4c6cdba5500810083b7/badges/1c7373533db1131adc98/gpa.svg)](https://codeclimate.com/repos/5842e4c6cdba5500810083b7/feed)
 [![Test Coverage](https://codeclimate.com/repos/5842e4c6cdba5500810083b7/badges/1c7373533db1131adc98/coverage.svg)](https://codeclimate.com/repos/5842e4c6cdba5500810083b7/coverage)
 [![Issue Count](https://codeclimate.com/repos/5842e4c6cdba5500810083b7/badges/1c7373533db1131adc98/issue_count.svg)](https://codeclimate.com/repos/5842e4c6cdba5500810083b7/feed)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jacques/php-freepaid/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jacques/php-freepaid/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/jacques/php-freepaid/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jacques/php-freepaid/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/jacques/php-freepaid/badges/build.png?b=master)](https://scrutinizer-ci.com/g/jacques/php-freepaid/build-status/master)
+[![StyleCI](https://styleci.io/repos/74669887/shield?branch=master)](https://styleci.io/repos/74669887)
 
 Wrappers around the FreePaid SOAP API.
 
