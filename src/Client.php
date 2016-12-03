@@ -18,7 +18,7 @@ class Client
     private $soapclient = null;
 
     /**
-     * @var string|null
+     * @var array
      */
     private $options = [
         'scheme' => 'http',
