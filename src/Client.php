@@ -6,6 +6,7 @@
  * @copyright 2013-2015 Jacques Marneweck.  All rights strictly reserved.
  * @license   MIT
  */
+
 namespace Jacques\Freepaid;
 
 class Client
