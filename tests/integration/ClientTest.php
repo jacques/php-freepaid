@@ -2,9 +2,7 @@
 
 namespace Jacques\Freepaid\Tests;
 
-use Jacques\Freepaid\Client;
-
-class FreepaidTest extends \PHPUnit_Framework_TestCase
+class ClientTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -29,7 +27,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
      */
     public function testEmptyContructor()
     {
-        $client = new \Jacques\Freepaid\Client;
+        $client = new \Jacques\Freepaid\Client();
         $this->assertNotNull($client);
         $this->assertInstanceOf('\Jacques\Freepaid\Client', $client);
     }
@@ -48,6 +46,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($client);
         $this->assertInstanceOf('\Jacques\Freepaid\Client', $client);
     }
+
     /**
      * @covers \Jacques\Freepaid\Client::__construct
      * @expectedException \InvalidArgumentException
@@ -56,7 +55,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
     public function testContructorOptionsMissingUsername()
     {
         $client = new \Jacques\Freepaid\Client([
-            'hostname' => 'ws.dev.freepaid.co.za'
+            'hostname' => 'ws.dev.freepaid.co.za',
         ]);
         $this->assertNotNull($client);
         $this->assertInstanceOf('\Jacques\Freepaid\Client', $client);
@@ -84,7 +83,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetBalance()
     {
-        $freepaid  = new \Jacques\Freepaid\Client([
+        $freepaid = new \Jacques\Freepaid\Client([
             'hostname' => 'ws.dev.freepaid.co.za',
             'username' => '1234567',
             'password' => 'p@ssw0rd',
@@ -105,7 +104,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetLastTransaction()
     {
-        $freepaid  = new \Jacques\Freepaid\Client([
+        $freepaid = new \Jacques\Freepaid\Client([
             'hostname' => 'ws.dev.freepaid.co.za',
             'username' => '1234567',
             'password' => 'p@ssw0rd',
@@ -129,7 +128,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
      */
     public function testPinbasedSingleVodacomR2()
     {
-        $freepaid  = new \Jacques\Freepaid\Client([
+        $freepaid = new \Jacques\Freepaid\Client([
             'hostname' => 'ws.dev.freepaid.co.za',
             'username' => '1234567',
             'password' => 'p@ssw0rd',
@@ -153,7 +152,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetTransactionSingleVodacomR2()
     {
-        $freepaid  = new \Jacques\Freepaid\Client([
+        $freepaid = new \Jacques\Freepaid\Client([
             'hostname' => 'ws.dev.freepaid.co.za',
             'username' => '1234567',
             'password' => 'p@ssw0rd',
@@ -179,7 +178,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
             $this->assertInternalType('double', $response->vouchers[$i]->costprice);
         }
 
-        /**
+        /*
          * 0
          */
         $this->assertEquals('vodacom', $response->vouchers['0']->network);
@@ -196,7 +195,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetTransactionStatusSingleVodacomR2()
     {
-        $freepaid  = new \Jacques\Freepaid\Client([
+        $freepaid = new \Jacques\Freepaid\Client([
             'hostname' => 'ws.dev.freepaid.co.za',
             'username' => '1234567',
             'password' => 'p@ssw0rd',
@@ -220,7 +219,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
      */
     public function testPinlessSingleVodacomR2()
     {
-        $freepaid  = new \Jacques\Freepaid\Client([
+        $freepaid = new \Jacques\Freepaid\Client([
             'hostname' => 'ws.dev.freepaid.co.za',
             'username' => '1234567',
             'password' => 'p@ssw0rd',
@@ -236,7 +235,6 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('2016120317224107', $response->orderno);
     }
 
-
     /**
      * @covers \Jacques\Freepaid\Client::__construct
      * @covers \Jacques\Freepaid\Client::getProducts
@@ -244,7 +242,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetProducts()
     {
-        $freepaid  = new \Jacques\Freepaid\Client([
+        $freepaid = new \Jacques\Freepaid\Client([
             'hostname' => 'ws.dev.freepaid.co.za',
             'username' => '1234567',
             'password' => 'p@ssw0rd',
@@ -274,7 +272,7 @@ class FreepaidTest extends \PHPUnit_Framework_TestCase
             $this->assertRegexp('!\A(vodacom|pd?-vodacom|mtn|pd?-mtn|cellc|pd?-cellc|branson|telkom|neotel|heita|p-heita|worldcall|worldchat|eskom|bela)\z!', $response->products[$i]->network);
         }
 
-        /**
+        /*
          * 0
          */
         $this->assertEquals('Bela', $response->products['0']->description);
