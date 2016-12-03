@@ -82,13 +82,13 @@ class Client
     public function pinbased($network, $amount, $client_ref, $quantity = 1)
     {
         $request = [
-           'user' => $this->options['username'],
-           'pass' => $this->options['password'],
-           "refno" => $client_ref,
-           "network" => $network,
-           "sellvalue" => $amount,
-           "count" => $quantity,
-           "extra" => "",
+            'user' => $this->options['username'],
+            'pass' => $this->options['password'],
+            "refno" => $client_ref,
+            "network" => $network,
+            "sellvalue" => $amount,
+            "count" => $quantity,
+            "extra" => "",
         ];
         $reply = $this->soapclient->placeOrder($request);
         return ($reply);
@@ -108,13 +108,13 @@ class Client
     public function pinless($network, $msisdn, $amount, $client_ref)
     {
         $request = [
-           'user' => $this->options['username'],
-           'pass' => $this->options['password'],
-           "refno" => $client_ref,
-           "network" => $network,
-           "sellvalue" => $amount,
-           "count" => 1,
-           "extra" => $msisdn,
+            'user' => $this->options['username'],
+            'pass' => $this->options['password'],
+            "refno" => $client_ref,
+            "network" => $network,
+            "sellvalue" => $amount,
+            "count" => 1,
+            "extra" => $msisdn,
         ];
         $reply = $this->soapclient->placeOrder($request);
         return ($reply);
@@ -123,8 +123,8 @@ class Client
     public function getBalance()
     {
         $request = [
-           'user' => $this->options['username'],
-           'pass' => $this->options['password'],
+            'user' => $this->options['username'],
+            'pass' => $this->options['password'],
         ];
         $reply = $this->soapclient->fetchBalance($request);
         return ($reply);
@@ -144,8 +144,8 @@ class Client
     public function getProducts()
     {
         $request = [
-           'user' => $this->options['username'],
-           'pass' => $this->options['password'],
+            'user' => $this->options['username'],
+            'pass' => $this->options['password'],
         ];
         $reply = $this->soapclient->fetchProducts($request);
         return ($reply);
