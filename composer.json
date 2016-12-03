@@ -33,13 +33,14 @@
     },
     "require-dev": {
         "php-vcr/phpunit-testlistener-vcr": "^1.1",
-        "phpunit/phpunit": "^5.7"
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^2.7"
     },
     "config": {
         "sort-packages": true
     },
     "scripts": {
         "test": "vendor/bin/phpunit --colors --debug --configuration=tests/phpunit.xml --coverage-clover build/logs/clover.xml --coverage-text",
-        "phpcs": "vendor/bin/phpcs --standard=PSR1,PSR2 --extensions=php lib tests"
+        "phpcs": "vendor/bin/phpcs --standard=PSR1,PSR2 --extensions=php src tests"
     }
 }
