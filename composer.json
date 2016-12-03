@@ -1,0 +1,45 @@
+{
+    "name": "jacques/php-vas-freepaid",
+    "type": "library",
+    "description": "Library for interacting with Freepaid's SOAP interface for vending pre-paid Airtime Vouchers",
+    "keywords": [
+        "airtime",
+        "freepaid"
+    ],
+    "homepage": "https://github.com/jacques/php-vas-freepaid",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jacques Marneweck",
+            "email": "jmarneweck+freepaid@gmail.com",
+            "homepage": "https://github.com/jacques/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jacques\\Freepaid\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jacques/php-vcr"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0",
+        "php-vcr/php-vcr": "dev-master"
+    },
+    "require-dev": {
+        "php-vcr/phpunit-testlistener-vcr": "^1.1",
+        "phpunit/phpunit": "^5.7"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors --debug --configuration=tests/phpunit.xml --coverage-clover build/logs/clover.xml --coverage-text",
+        "phpcs": "vendor/bin/phpcs --standard=PSR1,PSR2 --extensions=php lib tests"
+    }
+}
