@@ -1,0 +1,11 @@
+language: php
+install:
+  - composer install
+php:
+  - 5.6
+  - 7.0
+script: vendor/bin/phpunit --configuration tests/phpunit.xml
+addons:
+    code_climate:
+        repo_token:
+            secure: "IsmM6SC831ivEI2dT1ARlKqKk+S0CxZSuR2H51pNLJzz1WOBeONMEXnchfV11YCEQFA1ouglQEwVmSmrbmHB2qQwF1sGpsztENOaWkZiwvxWQLzne9SynXFVEvWoN1lqqyxdR6w+TApWMCKo4B1vbWHB4UUocZpZX1ZH3FOBLngYLlAbsWMgpbOiJnD6WLHbrajKcxCdmm4EaQX3T2TI5yWRId2FBDliaUiwftgyAU8NujaDluwcYRZv9INe1hxE8c1iq9GPG0jBa0f5YhlN+feIdiSyuPS+ZSzV6ko4IXf+mhE2uitNViarGjM/Ilg/LSO+0VekLiP98IvG0gsKskE2TTP6hl3/9pWqVsIeyqM2PUY+m1jZ5lBkLWR5gjDpfNlWXcBxkpBGhaTy8oiJGGnXLra3Ft0gddaisaUh1FkP0MZC2IvDDLmVQUJrb9kE9lsyIbQdxol8HTB6Sp6hRYY52va+Kn+Av7CFU9SSO0HTBBAKT10wwePnAuK6tOAxiQPCaHzygczJW0dq7jx0Lm9+crJjxMR2MkmOvgVfb7Y9JV/EQASAIUVRoso+Z1h0kBy5yF4FIDabsEkvjFVySv7l7GQk82cHfZCdCq0TGsOyRVmercG5Qg58eAgbb6EC6ltlfw6MPP7bjAbQXIdowWBTgxNE+L/BNWXaJhGekF4="
