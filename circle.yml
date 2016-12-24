@@ -1,0 +1,21 @@
+machine:
+  php:
+    version: 5.6.17
+
+dependencies:
+  cache_directories:
+    - "~/.composer"
+
+test:
+  override:
+    - "php vendor/bin/phpunit --configuration=tests/phpunit.xml --verbose --debug --coverage-clover build/logs/clover.xml --coverage-text"
+    - "phpenv local 5.6.22"
+    - "php vendor/bin/phpunit --configuration=tests/phpunit.xml --verbose --debug"
+    - "phpenv local 7.0.4"
+    - "php vendor/bin/phpunit --configuration=tests/phpunit.xml --verbose --debug"
+    - "phpenv local 7.0.7"
+    - "php vendor/bin/phpunit --configuration=tests/phpunit.xml --verbose --debug"
+    - "phpenv local 7.0.11"
+    - "php vendor/bin/phpunit --configuration=tests/phpunit.xml --verbose --debug"
+  post:
+    - bash bin/send-test-coverage
