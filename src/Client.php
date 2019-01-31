@@ -1,9 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Client for Freepaid's SOAP interface.
  *
  * @author    Jacques Marneweck <jacques@powertrip.co.za>
- * @copyright 2013-2015 Jacques Marneweck.  All rights strictly reserved.
+ * @copyright 2013-2019 Jacques Marneweck.  All rights strictly reserved.
  * @license   MIT
  */
 

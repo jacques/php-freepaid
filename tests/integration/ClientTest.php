@@ -1,8 +1,15 @@
-<?php
+<?php declare(strict_types=1);
+ /**
+ * Client for Freepaid's SOAP interface.
+ *
+ * @author    Jacques Marneweck <jacques@powertrip.co.za>
+ * @copyright 2013-2019 Jacques Marneweck.  All rights strictly reserved.
+ * @license   MIT
+ */
 
-namespace Jacques\Freepaid\Tests;
+namespace Jacques\Freepaid\Tests\Integration;
 
-class ClientTest extends \PHPUnit_Framework_TestCase
+class ClientTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Sets up the fixture, for example, opens a network connection.
